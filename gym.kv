@@ -1,0 +1,42 @@
+#:kivy 2.0.0
+Accueil:
+<Accueil>:
+    Button:
+        text: 'arms'
+        size_hint: .15 ,.1
+        on_press: root.show_curve(1),root.draw_axes()
+
+
+        pos_hint: {'center_x':.8,'center_y':.94}
+    Button:
+        text: 'legs'
+        size_hint: .15,.1
+        on_press: root.show_curve(2)
+
+        pos_hint: {'center_x':0.6,'center_y':0.94}
+    Button:
+        text: 'running '
+        size_hint: .15,.1
+        on_press: root.show_curve(3)
+
+        pos_hint: {'center_x':0.4,'center_y':0.94}
+    Button:
+        text: 'pushups'
+        size_hint: .15,.1
+        on_press: root.show_curve(4)
+
+        pos_hint: {'center_x':0.2,'center_y':0.94}
+    
+<InsertValueLayout>:
+    TextInput :
+        id: value_input
+        text: ''
+        hint_text: 'Enter value'
+    Button:
+        text:'insert value '
+
+    
+<CurveWidget>:
+    
+
+<gymWidget>:
