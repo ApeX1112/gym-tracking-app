@@ -223,6 +223,14 @@ class Accueil(FloatLayout):
         self.insert_button3.opacity=0
         self.curve_wida1.opacity=0
         self.curve_widl1.opacity=0
+
+        self.cursor.execute('''INSERT INTO gym_data (arms_lift ,
+        arms_series ,
+        running_time ,
+        num_pushups , 
+        legs_lift , 
+        legs_series ) VALUES (?,?,?,?,?,?)''', (0,0,0,0,0,0))
+        self.conn.commit()
         
 
 
